@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkShrink</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1>LinkShrink - URL Shortener</h1>
     <div class="cont">
         <form action="/" method="post">
-            <label for="long_url">Enter the URL to shorten:</label>
+            <label for="long_url">Enter the URL to Shrink</label>
             <input type="text" id="long_url" name="long_url" required>
             <input type="submit" value="Shorten">
         </form>

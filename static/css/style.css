@@ -74,7 +74,7 @@ body {
   }
   
   .result-box {
-    width: 30%;
+    width: 40%;
     display: flex;
     align-items: center;
     padding: 8px;
@@ -85,8 +85,8 @@ body {
   }
   
   .result-box span {
-    flex-grow: 1;
-    font-size: 16px;
+    flex-grow: 3;
+    font-size: 18px;
     word-break: break-all;
   }
   
