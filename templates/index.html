@@ -1,11 +1,14 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>URL Shortener</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShrink</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>URL Shortener</h1>
+    <h1>LinkShrink - URL Shortener</h1>
     <div class="cont">
         <form action="/" method="post">
             <label for="long_url">Enter the URL to shorten:</label>
@@ -14,8 +17,33 @@
         </form>
     </div>
     {% if short %}
-    <p>Shortened URL: <span id="shortened-url">{{short}}</span></p>
+
+    <div class="result">
+        <!-- <p>Shortened URL:</p> -->
+        <div class="result-box">
+            <span id="shortened-url">{{ short }}</span>
+            <button onclick="copyToClipboard()">Copy</button>
+        </div>
+    </div>
     {% endif %}
+
+    <script>
+        function copyToClipboard() {
+            const copyText = document.getElementById("shortened-url");
+            const tempInput = document.createElement("input");
+            tempInput.value = copyText.textContent;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+           
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(copyText);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    </script>
 </body>
 </html>
 
