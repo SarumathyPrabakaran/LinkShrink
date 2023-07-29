@@ -39,7 +39,7 @@ body {
     margin-bottom: 10px;
   }
   
-  input[type="text"] {
+  input[type="url"] {
     width: 300px;
     padding: 8px;
     font-size: 16px;

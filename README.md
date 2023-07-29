@@ -1,2 +1,2 @@
 # LinkShrink
-URL shortener
+URL shortener using `tinyurl` API.
