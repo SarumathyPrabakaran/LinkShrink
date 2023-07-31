@@ -1,6 +1,10 @@
 # LinkShrink
 LinkShrink is a simple URL shortener application built with Flask and TinyURL API. It allows users to shorten long URLs and obtain concise and easily shareable shortened URLs.
 
+![image](https://github.com/SarumathyPrabakaran/LinkShrink/assets/95531351/de6e0cdc-f655-4d4f-b797-334cf71aa882)
+
+
+
 ## Features
 * Shorten long URLs with a click of a button.
 * Copy the shortened URL to the clipboard with just one click.
